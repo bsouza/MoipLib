@@ -2,7 +2,7 @@ Example
 =======
 
 ```ruby
-re_relative '../lib/request'
+require 'moiplib'
 
 buyer = Moiplib::Buyer.new("Fulano").
   with_cpf("0136564867").
@@ -15,17 +15,16 @@ card = Moiplib::Card.new.
   with_code(345).
   expires_in(8, 2015)
   
-buy = Moiplib::Buy.new(18).
+buy = Moiplib::Buy.new(rand(1000)).
   with_total(150).
   divided_into(5).
   with_card(card)
   
 action = Moiplib::Actions::DirectPayment.new(buy)
-moip = Moiplib::Request.new
+request = Moiplib::Request.new
+result = request.perform!(action)
 
-result = moip.request(action)
-
-if moip.success? then
+if request.success? then
   puts "true"
 else
   puts result
