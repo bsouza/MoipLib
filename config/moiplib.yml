@@ -1,0 +1,4 @@
+moip:
+  token: YOUR_TOKEN
+  key: YOUR_KEY
+  uri: https://desenvolvedor.moip.com.br/sandbox/ws/alpha
