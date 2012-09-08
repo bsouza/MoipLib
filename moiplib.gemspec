@@ -12,6 +12,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "moiplib"
   gem.require_paths = ["lib"]
+  gem.add_runtime_dependency "nokogiri"
   gem.files = [
     "Gemfile",
     "LICENSE",
@@ -24,6 +25,6 @@ Gem::Specification.new do |gem|
     "lib/moiplib/config.rb",
     "lib/moiplib/version.rb",
     "lib/moiplib/actions/direct_payment.rb",
-  ]
+  ]  
   gem.version       = Moiplib::VERSION
 end
