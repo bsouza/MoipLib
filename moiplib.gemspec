@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency "nokogiri", ">= 1.5.5"
   gem.files = [
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE",
     "README.md",
     "Rakefile",
